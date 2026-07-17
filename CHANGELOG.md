@@ -3,6 +3,30 @@
 All notable changes to PixelTheater (formerly Cinecraft) are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.4.1] — 2026-07-17 — Multiplayer Hotfix
+
+### Fixed
+- **Other players on a server only saw "Playback error"** when someone started a
+  video. Three causes, all fixed on the viewing client:
+  - While yt-dlp was still being downloaded on first run (fresh install), any
+    incoming video was marked as *permanently failed* and never retried. The
+    screen now shows *Loading video…* and playback starts automatically the
+    moment the download finishes.
+  - A failed first-run download (offline, firewall) is now retried automatically
+    every 30 seconds instead of never.
+  - Viewers **without VLC installed** ran into a generic playback error via the
+    sync path. The screen now clearly shows *VLC not installed* (plus the
+    existing chat hint on join).
+- A resolve that fails once (network hiccup right after joining) now goes through
+  the same 2 s/5 s/15 s retry ladder as stream errors instead of failing for good
+  on the first miss.
+- The projector GUI status now shows *Loading* during retry gaps instead of *Idle*.
+
+### Known limitation
+- **Local files** (`C:\...`) only play on the machine where the file exists. Other
+  players cannot see them — use a platform URL or server-side playback for shared
+  viewing.
+
 ## [0.4.0] — 2026-07-16 — "Cinema Furnishing"
 
 No changes to the playback pipeline whatsoever — this release turns the working
