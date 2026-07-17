@@ -1,0 +1,40 @@
+name: 💡 Feature Request
+description: Suggest an idea for PixelTheater / Eine Idee für PixelTheater vorschlagen
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English or German is fine. / Englisch oder Deutsch, beides ist okay.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve? / Welches Problem löst das?
+      description: e.g. "As a cinema owner I want ... so that ..." / z. B. "Als Kinobesitzer möchte ich ... damit ..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the feature / Beschreibe das Feature
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered / Überlegte Alternativen
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Bereich
+      options:
+        - Playback / Wiedergabe
+        - Cinema blocks & decoration / Kino-Blöcke & Deko
+        - Control blocks & redstone / Steuerblöcke & Redstone
+        - Vending & tickets / Automaten & Tickets
+        - GUI & usability
+        - Server / multiplayer
+        - Other / Sonstiges
+    validations:
+      required: true

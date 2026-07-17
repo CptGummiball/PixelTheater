@@ -1,0 +1,79 @@
+name: 🐛 Bug Report
+description: Report a problem with PixelTheater / Ein Problem mit PixelTheater melden
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! / Danke, dass du dir Zeit für eine Fehlermeldung nimmst!
+        Please fill in as much as you can — English or German is fine. / Englisch oder Deutsch, beides ist okay.
+  - type: input
+    id: mod-version
+    attributes:
+      label: PixelTheater version
+      placeholder: "0.4.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Minecraft / Fabric Loader / Fabric API versions
+      placeholder: "MC 1.21.1, Loader 0.19.3, Fabric API 0.116.14"
+    validations:
+      required: true
+  - type: input
+    id: vlc-version
+    attributes:
+      label: VLC version (Help → About) and operating system
+      placeholder: "VLC 3.0.21 64-bit, Windows 11"
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Where does it happen? / Wo tritt es auf?
+      options:
+        - Singleplayer
+        - Multiplayer (client-side playback)
+        - Multiplayer (server-side playback)
+        - Dedicated server console
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened? / Was ist passiert?
+      description: Also tell us what you expected. / Beschreibe auch, was du erwartet hast.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Schritte zum Nachstellen
+      placeholder: |
+        1. Place projector ...
+        2. Paste URL ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Video/stream URL you tried (if playback-related)
+      placeholder: "https://www.youtube.com/watch?v=..."
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log (logs/latest.log)
+      description: Drag & drop the file or paste the relevant lines. / Datei anhängen oder relevante Zeilen einfügen.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: VLC Media Player (64-bit, 3.x) is installed / ist installiert
+          required: true
+        - label: I searched existing issues / Ich habe bestehende Issues durchsucht
+          required: true
