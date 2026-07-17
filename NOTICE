@@ -1,0 +1,19 @@
+PixelTheater (formerly Cinecraft; technical mod id remains "cinecraft")
+Copyright 2026 CptGummiball
+
+This mod is a from-scratch reimplementation inspired by "Lumière Play"
+by jrxmod (https://modrinth.com/mod/lumiereplay), licensed under the
+Apache License, Version 2.0. The original source repository is no longer
+available; behavior was reconstructed from the published mod under the
+terms of its license.
+
+This product bundles vlcj and vlcj-natives by Caprica Software Limited
+(https://github.com/caprica/vlcj), licensed under GPL-3.0 with the vlcj
+special exception for use with LGPL libVLC / or LGPL-3.0 for vlcj-natives.
+VLC media player (libVLC) is a separate installation by the user and is
+licensed under LGPL-2.1+.
+
+At runtime this mod can download the following independent tools to the
+user's machine, which are not part of this distribution:
+  - yt-dlp (https://github.com/yt-dlp/yt-dlp), Unlicense
+  - FFmpeg builds (https://github.com/yt-dlp/FFmpeg-Builds), GPL-3.0
